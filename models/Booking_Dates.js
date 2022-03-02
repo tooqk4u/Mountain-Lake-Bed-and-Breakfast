@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-// TODO - add validation to dates- end should be greater than start, start should be less than end, start should be after current date
+// TODO - add validation to dates- end should be greater than start, start should be less than end, start should be greater than current date
 class Booking_Dates extends Model {}
 
 Booking_Dates.init(
@@ -20,29 +20,31 @@ Booking_Dates.init(
       },
     },
     room_id: {
-        type:DataTypes.INTEGER,
-        allowNull:false,
-        references:{
-            model: "room",
-            key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "room",
+        key: "id",
+      },
     },
 
     start_date: {
-        type: DataTypes.DATE,
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
-    end_date:{
-        type: DataTypes.DATE,
-        allowNull:false
-    }
+    end_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
     modelName: "booking_dates",
-  }
+  },
+
+  
 );
 
 module.exports = Booking_Dates;
