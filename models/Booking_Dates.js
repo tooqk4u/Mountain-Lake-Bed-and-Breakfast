@@ -13,7 +13,7 @@ Booking_Dates.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      
       references: {
         model: "user",
         key: "id",
@@ -21,7 +21,7 @@ Booking_Dates.init(
     },
     room_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      
       references: {
         model: "room",
         key: "id",
