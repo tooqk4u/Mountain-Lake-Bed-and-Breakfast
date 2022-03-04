@@ -5,13 +5,19 @@ const Booking_Dates = require('./Booking_Dates');
 const Amenities = require('./Amenities');
 
 // associations
-// Room.hasMany(Comment, {
-//     foreignKey: 'room_id'
-// });
+Room.hasMany(Comment, {
+    foreignKey: 'room_id'
+});
 
-// Comment.hasMany(Room, {
-//     foreignKey: 'room_id'
-// });
+Comment.belongsTo(Room, {
+    foreignKey: 'room_id',
+    onDelete: 'SET NULL'
+});
+
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
 
 Room.hasMany(Amenities, {
     foreignKey: 'room_id'
@@ -19,6 +25,31 @@ Room.hasMany(Amenities, {
 
 Amenities.belongsTo(Room, {
     foreignKey: 'room_id'
+});
+
+Room.belongsToMany(User, {
+    through: 'booking_dates',
+    as: 'booking_date',
+    foreignKey: 'room_id'
+});
+
+User.belongsToMany(Room, {
+    through: 'booking_dates',
+    as: 'room_booking',
+    foreignKey: 'user_id'
+});
+
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
+
+Booking_Dates.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
+User.hasMany(Booking_Dates, {
+    foreignKey: 'user_id'
 });
 
 module.exports = { User, Room, Comment, Booking_Dates, Amenities };
