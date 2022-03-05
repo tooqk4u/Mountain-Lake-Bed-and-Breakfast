@@ -1,6 +1,4 @@
-body {
-  background-color: #ECECEC;
-  color: #444444;
+body {  
   padding: 0;
   margin: 0;
   perspective: 1px;
@@ -8,6 +6,11 @@ body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Roboto';
+}
+img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .left-underline {
   display: inline-block;
@@ -45,13 +48,11 @@ div.navbar {
   top: 0;
   left: 0;
   width: 100%;
-  background: #ee6e73;
-  -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 2px 6px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  
+ 
   z-index: 9999999;
 }
-div.navbar > ul.navbar-container {
+div.navbar > ul.navbar-holder {
   list-style-type: none;
   margin: 0;
   padding-left: 1em;
@@ -60,11 +61,11 @@ div.navbar > ul.navbar-container {
 }
 div.navbar > ul > li.nav-item {
   float: right;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.18);
   transition: all 0.5s ease;
 }
 div.navbar > ul > li.active {
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: white (0, 0, 0, 0.18);
 }
 div.navbar > ul > li:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -75,8 +76,9 @@ a.nav-button {
   line-height: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  color: rgba(228, 241, 254, 1);
+  color:rgb(240, 237, 193);
   transition: all 0.5s ease;
+  font-weight: 900;
 }
 a.nav-button:hover {
   text-decoration: none;
@@ -87,65 +89,75 @@ li.active > a.nav-button {
 .brand-logo {
   float: left;
   cursor: default;
+  font-size: 5vh;
+  color:rgb(240, 237, 193);
 }
-.placeholder {
-  height: 70vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.parallax.p1 {
-  background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-70374.jpg) no-repeat fixed 50% 0;
-  background-size: cover;
-  color: #fff;
-}
-.parallax.p2 {
-  background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-126549.jpg) no-repeat fixed 50% 0;
-  background-size: cover;
-  color: #fff;
-}
-.parallax.p3 {
-  background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-95766.jpg) no-repeat fixed 70% 0;
-  background-size: cover;
-  color: #fff;
-}
-.parallax-text {
-  width: 24em;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  border: .5em solid #fff;
-  margin-left: -10%;
-  padding: 2em 0;
+
+.section-title {
+  font-size: 48px;
+  border-bottom: 3px solid;
+  color: var(--secondary-color);
+  padding-bottom: 20px;
   text-align: center;
-  z-index: 999;
+  margin: 0 auto 35px auto;
+  width: 50%;
 }
-.parallax > div.blur-image {
-  position: relative;
+.primary-border {
+  border-color: var(--primary-color);
+}
+.room {
+  margin: 20px;
+  flex: 1;
+}
+.guest-rooms {
   width: 100%;
-  height: 100%;
-} 
-hgroup{
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: #fff;
-  border: 5px solid #fff;
-  padding: .5em 3em;
-  background-color: rgba(0,0,0,.2);
-  z-index: 2;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.row {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  min-height: 150px;
+
+.room img {
+  width: 100%;
 }
+.room-bio {
+  padding: 25px;
+  line-height: 1.3;
+}
+
+.room-bio h3 {
+  font-size: 28px;
+}
+
+.room-bio h4 {
+  font-weight: lighter;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.room-bio p {
+  font-size: 17px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
+
+
+
+
+
+
+
+
 .row:after {
   content: "";
   display: table;
@@ -159,29 +171,122 @@ hgroup{
   padding-left: 5px;
   padding-right: 5px;
 }
-footer {
-  width: 100%;
-  padding-top: 20px;
-  display: block;
-  background-color: #ee6e73;
-}
-.footer-copyright {
-  font-weight: 300;
-  overflow: hidden;
-  height: 50px;
-  line-height: 50px;
-  color: black;
-  background-color: rgba(51, 51, 51, 0.08);
-}
+
 .container {
   width: 85%;
   padding: 0 1.5rem;
   margin: 0 auto;
   max-width: 1280px;
 }
-footer p {
-  border-left: 3px solid #ffcdd2;
-  padding-left: 15px;
-  text-indent: 20px;
-  color: #ececec;
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2, footer div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  
+  .hero-cta {
+    text-align: center;
+  }
+
+  .section-title {
+    width: 80%;
+  }
+  
+  .room {
+    flex: 0 70%;
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;  
+  }
+
+  .room-bio h3, .room-bio h4 {
+    display: block;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .hero-form button {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .room {
+    flex: 0 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+
+  .contact-form {
+    order: 3;
+  }
 }
