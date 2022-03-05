@@ -1,4 +1,4 @@
-const { Room } = require('../models');
+const { User } = require('../models');
 
 const userData = [
   {
@@ -90,5 +90,9 @@ const userData = [
     last_name: 'Donner',
     email: 'l_donner_7432@gmail.com',
     password: 'LoveinanElevator2',
-  }
-]
+  },
+];
+
+const seedUser = () => User.bulkCreate(userData);
+
+module.exports = seedUser; 
