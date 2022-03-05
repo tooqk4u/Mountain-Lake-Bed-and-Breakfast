@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const { Room, Amenities, Booking_Dates } = require("../../models");
 
 //find all
@@ -13,6 +14,7 @@ router.get("/", (req, res) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
+
     });
 });
 
@@ -92,5 +94,6 @@ router.delete("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;
