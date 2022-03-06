@@ -28,7 +28,7 @@ Comment.init(
       },
     },
     comment_text: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
   },
 
