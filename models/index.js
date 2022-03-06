@@ -3,6 +3,8 @@ const Room = require('./Room');
 const Comment = require('./Comment');
 const Booking_Dates = require('./Booking_Dates');
 const Amenities = require('./Amenities');
+const Post = require('./Post');
+const Vote = require('./Vote');
 
 // associations
 Room.hasMany(Comment, {
@@ -52,4 +54,55 @@ User.hasMany(Booking_Dates, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Room, Comment, Booking_Dates, Amenities };
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+  });
+  
+  Post.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+  });
+  
+  User.belongsToMany(Post, {
+    through: Vote,
+    as: 'voted_posts',
+  
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+  });
+  
+  Post.belongsToMany(User, {
+    through: Vote,
+    as: 'voted_posts',
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+  });
+  
+  Vote.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+  });
+  
+  Vote.belongsTo(Post, {
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+  });
+  
+  User.hasMany(Vote, {
+    foreignKey: 'user_id'
+  });
+  
+  Post.hasMany(Vote, {
+    foreignKey: 'post_id'
+  });
+
+  Comment.belongsTo(Post, {
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+  });
+
+  Post.hasMany(Comment, {
+    foreignKey: 'post_id'
+  });
+
+module.exports = { User, Room, Comment, Booking_Dates, Amenities, Vote, Post };
