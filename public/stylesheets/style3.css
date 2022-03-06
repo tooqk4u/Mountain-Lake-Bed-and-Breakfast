@@ -1,3 +1,11 @@
+:root {
+  --primary: #41694F;
+  --secondary: #4C7786;
+  --tertiary: #8C4A3E;
+  --text: #84D39F;
+  }
+
+
 body {  
   padding: 0;
   margin: 0;
@@ -48,8 +56,6 @@ div.navbar {
   top: 0;
   left: 0;
   width: 100%;
-  
- 
   z-index: 9999999;
 }
 div.navbar > ul.navbar-holder {
@@ -151,13 +157,6 @@ li.active > a.nav-button {
   display: flex;
 }
 
-
-
-
-
-
-
-
 .row:after {
   content: "";
   display: table;
@@ -177,6 +176,30 @@ li.active > a.nav-button {
   padding: 0 1.5rem;
   margin: 0 auto;
   max-width: 1280px;
+}
+
+.login-form, .signup-form {
+  color: var(--tertiary);
+}
+
+input, .login-form button, .signup-form button {
+  padding: 0 2px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.login-form button, .signup-form button {
+  background-color: var(--primary);
+  color: var(--text);
+  border-color: var(--tertiary);
+  border-style: outset;
+  border-width: 3px;
+}
+.login-form button:hover, .signup-form button:hover {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  border-style: inset;
+  transition: all .5s;
 }
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -201,19 +224,6 @@ li.active > a.nav-button {
     font-size: 20px;
   }
 
-  footer h2, footer div {
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-cta, .hero-form {
-    width: 100%;
-  }
-  
-  .hero-cta {
-    text-align: center;
-  }
-
   .section-title {
     width: 80%;
   }
@@ -222,37 +232,13 @@ li.active > a.nav-button {
     flex: 0 70%;
   }
   
-  .contact-info iframe{
-    flex: 1 100%;
-  }
+  
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   section {
     padding: 30px 15px;
-  }
-
-  .step h3 {
-    flex: 1 100%;
-    text-align: center;
-  }
-
-  .step-info {
-    flex: 2 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .step-img {
-    flex: 0 32%;
-    margin-right: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .step-text {
-    flex: 100%;  
   }
 
   .room-bio h3, .room-bio h4 {
@@ -262,10 +248,6 @@ li.active > a.nav-button {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-  .hero-form button {
-    width: 100%;
-  }
-
   .section-title {
     width: 95%;
   }
@@ -278,15 +260,5 @@ li.active > a.nav-button {
     flex: 0 100%;
   }
 
-  .contact-info {
-    text-align: center;
-  }
-
-  .contact-info > * {
-    flex: 0 100%;
-  }
-
-  .contact-form {
-    order: 3;
-  }
+  
 }
