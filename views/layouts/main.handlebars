@@ -5,22 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mountain Lake Bed and Breakfast</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/style3.css">
+  <link rel="stylesheet" href="/stylesheets/style2.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Mountain Lake Bed and Breakfast</a>
-      </h1>
+     {{>navbar}} 
       <nav>
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}}
   <a href="/dashboard">dashboard</a>
   <button id="logout" class="btn-no-style">logout</button>
   {{else}}
-  <a href="/login">login</a>
-  {{/if}}
+  
+  {{/if}} --}}
 </nav>
     </header>
     <main>
