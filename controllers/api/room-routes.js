@@ -48,6 +48,8 @@ router.post("/", (req, res) => {
     room_number: req.body.room_number,
     room_price: req.body.room_price,
     room_size: req.body.room_size,
+    room_description: req.body.room_description,
+    room_img: req.body.room_description
   })
     .then((dbRoomData) => res.json(dbRoomData))
     .catch((err) => {

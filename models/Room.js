@@ -26,6 +26,12 @@ Room.init(
     room_size: {
       type: DataTypes.INTEGER,
     },
+    room_description: {
+      type: DataTypes.STRING
+    },
+    room_img: {
+      type:DataTypes.STRING
+    }
   },
   { sequelize, freezeTableName: true, underscored: true, modelName: "room" }
 );
