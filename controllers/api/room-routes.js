@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   Room.findAll({
     include: {
       model: Amenities,
-      attributes: ["smoking", "view_type"],
+      
     },
   })
     .then((dbRoomData) => res.json(dbRoomData))

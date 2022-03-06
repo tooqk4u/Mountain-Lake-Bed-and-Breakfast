@@ -11,123 +11,19 @@
       <h2 class="section-title primary-border">Check Out Our Rooms</h2>
 
       <div class="guest-rooms">
+       {{#each rooms as |room| }}
         <article class="room">
-          <img src="./images/guest-room.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Standard Lake</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa 
-            </p>
-          </div>
-        </article>
+            <img src="{{ room_img }}" alt="image of {{room_name}}" />
+            <div class="room-bio">
+                <a href="/room-details/{{id}}">
+                    <h3 class="room-name">{{ room_name }}</h3>
+                </a>
 
-        <article class="room">
-          <img src="./images/Candlewood.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Standard Mountain</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa 
-            </p>
-          </div>
+                <p>
+                    {{ room_description }}
+                </p>
+            </div>
         </article>
-
-        <article class="room">
-          <img src="./images/Misty Mountain Deluxe Room.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Mount Washington</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi 
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/Mountain Sierra Suite.webp" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Lake Derby</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/LakeTahoe.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Lake Tahoe</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/standard.webp " alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Mount Charleston</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa 
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/guest-room.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Lake Shasta Deluxe Room</h3>
-
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa sed itaque velit
-              maiores optio dolorem excepturi aperiam dolores, voluptatibus
-              suscipit amet quis repellat!
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/our-room-pic-1.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Misty Mt Deluxe Room</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa sed itaque velit
-              maiores optio dolorem excepturi aperiam dolores, voluptatibus
-              suscipit amet quis repellat!
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/hotel-jerome-an-auberge.jpg" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Candlewood Lake Suite</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa sed itaque velit
-              maiores optio dolorem excepturi aperiam dolores, voluptatibus
-              suscipit amet quis repellat!
-            </p>
-          </div>
-        </article>
-
-        <article class="room">
-          <img src="./images/Mountain Sierra Suite.webp" alt="" />
-          <div class="room-bio">
-            <h3 class="room-name">Mountain Sierra Suite</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              neque animi quo cupiditate commodi saepe culpa sed itaque velit
-              maiores optio dolorem excepturi aperiam dolores, voluptatibus
-              suscipit amet quis repellat!
-            </p>
-          </div>
-        </article>
+         {{/each }}
       </div>
     </section>

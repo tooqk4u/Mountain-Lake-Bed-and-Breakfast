@@ -1,0 +1,31 @@
+ <div class="room-bio container m-1">
+          <h2>{{room_details.room_name}}</h2>
+          <div class="row flex-row">
+            <div class="col-sm-12 col-md-8 w-auto">
+                 <img src="{{ room_details.room_img }}" class="img-fluid" alt="image of {{room_details.room_name}}" />
+            
+            </div>
+            <div class="col-sm-12 col-md-2 mt-2">
+              <p>{{room_details.room_description}}</p>
+              <h4>Amenities</h4>
+              <ul class="list-unstyled">
+                <!--add amenities list here --> 
+              </ul>
+              <!--If loggoed in -->
+              <div class="form-group">
+                <label for="start_date">Check In Date</label>
+                <input type="date" id="start_date" name="start_date">
+                <label for="end_date">Check Out Date</label>
+                <input type="date" id="end_date" name="end_date">
+                <button type="submit" class="btn btn-outline-danger">Reserve!</button>
+                <!--end of if logged in -->
+              </div>
+              <h4>What People are saying about {{room-details.room_name}} </h4>
+              <!--comments here- maybe limit to 5? --> 
+
+              <!-- again, if logged in -->
+              <p>Did you stay in {{room-details.room_name}} Tell other guests what you through!</p>
+            </div>
+            
+          </div>
+        </div>
