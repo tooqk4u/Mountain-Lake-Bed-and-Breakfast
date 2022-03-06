@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Room, Amenities,   User } = require("../models");
+const { Room, Amenities, Comment,  User } = require("../models");
 
 router.get("/:id", (req, res) => {
   Room.findOne({
@@ -7,17 +7,18 @@ router.get("/:id", (req, res) => {
     include: [
       { model: Amenities },
       //{ model: Booking_Dates, attributes: ["start_date", "end_date"] },
-      /* {
+       {
         model: Comment,
         attributes: ["comment_text"],
         include: [{ model: User, attributes: ["first_name"] }],
-      }, */
+      },
     ],
   }).then( (dbRoomData) => {
       if (dbRoomData){
     
-   console.log(dbRoomData)
+   
     const room_details =  dbRoomData.get({ plain: true })
+    console.log(room_details)
     res.render("room-details", { room_details });
 
       }else {
