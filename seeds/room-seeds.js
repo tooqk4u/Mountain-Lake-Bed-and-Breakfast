@@ -8,7 +8,7 @@ const roomData = [
     room_size: 500,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Mountain Sierra Suite.webp",
+    room_img: "/images/Mountain Sierra Suite.webp",
   },
   {
     room_name: "Candlewood Lake Suite",
@@ -17,7 +17,7 @@ const roomData = [
     room_size: 600,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Candlewood.jpg",
+    room_img: "/images/Candlewood.jpg",
   },
   {
     room_name: "Misty Mountain Deluxe Room",
@@ -26,7 +26,7 @@ const roomData = [
     room_size: 300,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Misty Mountain Deluxe Room.jpg",
+    room_img: "/images/Misty Mountain Deluxe Room.jpg",
   },
   {
     room_name: "Lake Shasta Deluxe Room",
@@ -35,7 +35,7 @@ const roomData = [
     room_size: 300,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Mountain Sierra Suite.webp",
+    room_img: "/images/Mountain Sierra Suite.webp",
   },
   {
     room_name: "Lake Tahoe",
@@ -44,7 +44,7 @@ const roomData = [
     room_size: 250,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/LakeTahoe.jpg",
+    room_img: "/images/LakeTahoe.jpg",
   },
   {
     room_name: "Lake Derby",
@@ -53,7 +53,7 @@ const roomData = [
     room_size: 250,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/guest-room (1).jpg",
+    room_img: "/images/guest-room (1).jpg",
   },
   {
     room_name: "Mount Washington",
@@ -62,7 +62,7 @@ const roomData = [
     room_size: 250,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Candlewood.jpg",
+    room_img: "/images/Candlewood.jpg",
   },
   {
     room_name: "Mount Charleston",
@@ -71,7 +71,7 @@ const roomData = [
     room_size: 250,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/LakeTahoe.jpg",
+    room_img: "/images/LakeTahoe.jpg",
   },
   {
     room_name: "Standard",
@@ -80,7 +80,7 @@ const roomData = [
     room_size: 200,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/Mountain Sierra Suite.webp",
+    room_img: "/images/Mountain Sierra Suite.webp",
   },
   {
     room_name: "Standard",
@@ -89,7 +89,7 @@ const roomData = [
     room_size: 200,
     room_description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequineque animi quo cupiditate commodi saepe culpa sed itaque velitmaiores optio",
-    room_img: "./images/guest-room (1).jpg",
+    room_img: "/images/guest-room (1).jpg",
   },
 ];
 
