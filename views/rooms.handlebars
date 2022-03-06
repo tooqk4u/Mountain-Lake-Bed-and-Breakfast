@@ -1,11 +1,12 @@
 <section class="container" id="rooms">
     <h2 class="section-title primary-border">Check Out Our Rooms</h2>
-    {{#each rooms as |room| }}
+    
     <div class="guest-rooms">
+        {{#each rooms as |room| }}
         <article class="room">
             <img src="{{ room_img }}" alt="image of {{room_name}}" />
             <div class="room-bio">
-                <a href="/room-detail/{{id}}">
+                <a href="/room-details/{{id}}">
                     <h3 class="room-name">{{ room_name }}</h3>
                 </a>
 
@@ -14,6 +15,7 @@
                 </p>
             </div>
         </article>
+         {{/each }}
     </div>
-    {{/each }}
+   
 </section>
