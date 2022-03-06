@@ -10,22 +10,10 @@ Amenities.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  bed_size: {
+ Amenity_type: {
     type: DataTypes.STRING,
-    allowNull: false,
-  },
-  view_type: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  smoking: {
-    type: BOOLEAN,
-    allowNull: false,
-  },
-  continental_breakfast: {
-    type: BOOLEAN,
-    allowNull: false,
-  },
+    allowNull: false    
+  }
 },
 {
   sequelize,
