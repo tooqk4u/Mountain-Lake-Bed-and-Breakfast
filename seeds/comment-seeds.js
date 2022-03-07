@@ -3,11 +3,11 @@ const { Comment } = require('../models');
 const commentData = [
   {
     user_id: 12,
-    room_id: 0,
+    room_id: 2,
     comment_text:'Excellent bartender! My bartender Jason was extremely nice, approachable, and knowledgeable about different cocktails. An amazing person who is very well versed in mixology. The venue was very nice with a log cabin feel that was extremely homely',
   },
   {
-    user_id:0, 
+    user_id:1, 
     room_id:9, 
     comment_text:'I cannot speak more highly about this property. Dog friendly. Beautiful grounds. Great spa. Fire pit at night. Great sports bar, service was amazing and I cannot wait to go back. Golf and tennis and lots of activities.',
   },
@@ -68,7 +68,7 @@ const commentData = [
   },
   {
     user_id: 2,
-    room_id: 0,
+    room_id: 2,
     comment_text:'I was expecting more from Wyndham. The name and pictures of all the activities are are deceiving. I was expecting more for my family and I got less. Upon arrival we were told to call the front desk to have your room cleaned. They were honest about that. We had to call everyday to have our room "cleaned". The toilet was never cleaned for the week that we were there.',
   },
   {

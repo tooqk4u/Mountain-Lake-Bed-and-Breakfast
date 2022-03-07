@@ -9,15 +9,23 @@ Room.hasMany(Comment, {
     foreignKey: 'room_id'
 });
 
+User.hasMany(Comment,{
+    foreignKey:'user_id'
+})
+
 Comment.belongsTo(Room, {
     foreignKey: 'room_id',
-    onDelete: 'SET NULL'
+    
 });
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    
 });
+
+
+
+
 
 Room.hasMany(Amenities, {
     foreignKey: 'room_id'
@@ -39,10 +47,7 @@ User.belongsToMany(Room, {
     foreignKey: 'user_id'
 });
 
-User.hasMany(Comment, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-});
+
 
 Booking_Dates.belongsTo(User, {
     foreignKey: 'user_id'
