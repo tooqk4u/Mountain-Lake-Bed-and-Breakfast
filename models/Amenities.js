@@ -10,7 +10,7 @@ Amenities.init({
     primaryKey: true,
     autoIncrement: true,
   },
- Amenity_type: {
+ amenity_type: {
     type: DataTypes.STRING,
     allowNull: false    
   }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mountain Lake Bed and Breakfast</title>
+    <link href="stylesheets/style3.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/style2.css" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header></header>
+      <main>
+        <div class="room-bio container m-1">
+          <h2>Room Name</h2>
+          <div class="row flex-row">
+            <div class="col-sm-12 col-md-8 w-auto">
+              <img src="./images/guest-room.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-sm-12 col-md-2 mt-2">
+              <p>this is all the room description stuff</p>
+              <h4>Amenities</h4>
+              <ul class="list-unstyled">
+                <li>view</li>
+                <li>bed size</li>
+              </ul>
+              <div class="form-group">
+                <label for="start_date">Check In Date</label>
+                <input type="date" id="start_date" name="start_date">
+                <label for="end_date">Check Out Date</label>
+                <input type="date" id="end_date" name="end_date">
+                <button type="submit" class="btn btn-outline-danger">Reserve!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+
+    <script src="/javascript/logout.js"></script>
+  </body>
+</html>

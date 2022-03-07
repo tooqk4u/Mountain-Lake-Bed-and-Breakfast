@@ -1,0 +1,38 @@
+ <div >
+          <h2>{{room_details.room_name}}</h2>
+          <div >
+            <div>
+                 <img src="{{ room_details.room_img }}"  alt="image of {{room_details.room_name}}" />
+            
+            </div>
+            <div >
+              <p>{{room_details.room_description}}</p>
+              <h4>Amenities</h4>
+              <ul class="list-unstyled">
+                 {{#each room_details.amenities as |amenity| }}
+                 <li>{{amenity}}</li>
+                 {{/each}}
+              </ul>
+              <!--If loggoed in -->
+              <div class="form-group">
+                <label for="start_date">Check In Date</label>
+                <input type="date" id="start_date" name="start_date">
+                <label for="end_date">Check Out Date</label>
+                <input type="date" id="end_date" name="end_date">
+                <button type="submit" class="btn btn-outline-danger">Reserve!</button>
+                <!--end of if logged in -->
+              </div>
+              
+              <h4>What People are saying about {{room_details.room_name}} </h4>
+              <!--comments here- maybe limit to 5? --> 
+                <ul>
+                    {{#each room_details.comments as |comment| }}
+                    <li>{{comment.comment_text}} -- {{comment.user.first_name}} </li>
+                    {{/each}}
+                </ul>
+              <!-- again, if logged in -->
+              <p>Did you stay in {{room-details.room_name}} Tell other guests what you through!</p>
+            </div>
+            
+          </div>
+        </div>

@@ -2,28 +2,28 @@ const { Amenities } = require("../models");
 
 const amenitiesData = [
   {
-    bed_size: "King",
+    amenity_type: "bed size: King",
   },
   {
-    bed_size: "Queen",    
+    amenity_type: "bed size: Queen",
   },
   {
-    bed_size: "Double",
+    amenity_type: "bed size: Double",
   },
   {
-    view_type: "Mountain",
+    amenity_type: "view: Mountain",
   },
   {
-    view_type: "Lake",    
+    amenity_type: "view Lake",
   },
   {
-    smoking: true,    
+    amenity_type: " smoking",
   },
   {
-    continental_breakfast: true,
+    amenity_type: "continental breakfast",
   },
 ];
 
 const seedAmenities = () => Amenities.bulkCreate(amenitiesData);
 
-module.exports = seedAmenities; 
+module.exports = seedAmenities;
