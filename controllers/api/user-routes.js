@@ -1,4 +1,4 @@
-const router = require("express").Router;
+const router = require("express").Router();
 const { User, Comment, Booking_Dates, Room } = require("../../models");
 //enable once post routes are tested
 const withAuth = require("../../utils/auth");
@@ -45,9 +45,9 @@ router.post("/", (req, res) => {
   })
     .then((dbUserData) => {
       req.session.save(() => {
-        (req.session.user_id = dbUserData.id),
-          (req.session.email = dbUserData.email),
-          (req.session.loggedIn = true);
+        req.session.user_id = dbUserData.id;
+          req.session.email = dbUserData.email;
+          req.session.loggedIn = true;
         res.json(dbUserData);
       });
     })
@@ -56,6 +56,8 @@ router.post("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+
 //update user
 router.put("/:id", (req, res) => {
   User.update(req.body, {
@@ -103,6 +105,7 @@ router.post("/login", (req, res) => {
     where: { email: req.body.email },
   })
     .then((dbUserData) => {
+      console.log("db-user-datea ====>" , dbUserData)
       if (!dbUserData) {
         res.status(400).json({ message: "no user with that email address" });
         return;
