@@ -19,10 +19,19 @@
                 <input type="date" id="start_date" name="start_date">
                 <label for="end_date">Check Out Date</label>
                 <input type="date" id="end_date" name="end_date">
-                <button type="submit" class="btn btn-outline-danger">Reserve!</button>
+                <button type="submit" class="btn btn-outline-danger">Book Room</button>
                 <!--end of if logged in -->
               </div>
               
+
+          <div class="form-group">
+                <label for="comment">comment</label>
+                <input type="text" id="comment" name="comment">
+                <button type="submit" class="btn btn-outline-danger">Submit</button>
+                <!--end of if logged in -->
+              </div>  
+
+
               <h4>What People are saying about {{room_details.room_name}} </h4>
               <!--comments here- maybe limit to 5? --> 
                 <ul>
