@@ -7,4 +7,7 @@ const RoomsRoute = require("./rooms-routes.js");
 router.use("/rooms", RoomsRoute);
 const RoomDetailsRoute = require("./roomDetail_routes.js");
 router.use("/room-details", RoomDetailsRoute);
+
+
+
 module.exports = router;
