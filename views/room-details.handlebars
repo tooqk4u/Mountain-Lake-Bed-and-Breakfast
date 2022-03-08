@@ -17,15 +17,17 @@
               {{#if loggedIn}}
               <div class="form-group">
                 <label for="start_date">Check In Date</label>
-                <input type="date" id="start_date" name="start_date">
+                <input type="date" id="start_date" name="start_date" class="form-control">
                 <label for="end_date">Check Out Date</label>
-                <input type="date" id="end_date" name="end_date">
-                <button type="submit" class="btn btn-outline-danger">Book Room</button>
+                <input type="date" id="end_date" name="end_date" class="form-control">
+                <br>
+                <button type="submit" 
+                class="btn btn-outline-danger form-control btn-primary ">Book Room</button>
                 <!--end of if logged in -->
               </div>
               {{/if}}
               
-              {{#if loggedIn}}
+              {{#if loggedIn}} 
               <div class="form-group">
                 <label for="comment">comment</label>
                 <input type="text" id="comment" name="comment">
