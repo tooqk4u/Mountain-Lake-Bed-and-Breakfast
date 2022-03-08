@@ -14,6 +14,7 @@
                  {{/each}}
               </ul>
               <!--If loggoed in -->
+              {{#if loggedIn}}
               <div class="form-group">
                 <label for="start_date">Check In Date</label>
                 <input type="date" id="start_date" name="start_date">
@@ -22,14 +23,16 @@
                 <button type="submit" class="btn btn-outline-danger">Book Room</button>
                 <!--end of if logged in -->
               </div>
+              {{/if}}
               
-
-          <div class="form-group">
+              {{#if loggedIn}}
+              <div class="form-group">
                 <label for="comment">comment</label>
                 <input type="text" id="comment" name="comment">
                 <button type="submit" class="btn btn-outline-danger">Submit</button>
                 <!--end of if logged in -->
-              </div>  
+              </div> 
+              {{/if}} 
 
 
               <h4>What People are saying about {{room_details.room_name}} </h4>
@@ -45,3 +48,9 @@
             
           </div>
         </div>
+
+        {{> comments post.comments}}
+
+        {{#if loggedIn}}
+        <script src="/javascript/comment.js"></script>
+        {{/if}}
