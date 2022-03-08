@@ -19,7 +19,7 @@ router.get("/:id", (req, res) => {
    
     const room_details =  dbRoomData.get({ plain: true })
     console.log(room_details)
-    res.render("room-details", { room_details });
+    res.render("room-details", { room_details, loggedIn: req.session.loggedIn });
 
       }else {
         res.status(404).end();
