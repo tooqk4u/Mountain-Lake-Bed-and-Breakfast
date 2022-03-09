@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   })
     .then((dbRoomData) => {
       const rooms = dbRoomData.map((room) => room.get({ plain: true }));
-      res.render("rooms", { rooms });
+      res.render("rooms", { rooms, loggedIn:req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
