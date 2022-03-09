@@ -4,7 +4,9 @@
   --tertiary: #8C4A3E;
   --text: #84D39F;
   }
-
+  .room-anchor {
+    text-decoration: none;
+  }
 
 body {  
   padding: 0;
