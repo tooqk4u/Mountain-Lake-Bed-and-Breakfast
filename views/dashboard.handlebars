@@ -1,9 +1,35 @@
 <div>
     <div class="user-data">
     <p>Name: {{dashData.first_name}} {{dashData.last_Name}}</p>
-    <p></p>
+    <p>email: {{dashData.email}}</p>
     </div>
-  
-
+    
+    <h2>Bookings</h2>
+    <table>
+        <tr>
+            <th>
+                Room
+            </th>
+            <th>
+                Check In Date
+            </th>
+            <th>
+                Check Out Date
+            </th>
+        </tr>
+        {{#each dashData.booking_dates as |bookings|}}
+        <tr>
+            <td>
+                {{bookings.room.room_name}}
+            </td>
+            <td>
+                {{bookings.start_date}}
+            </td>
+            <td>
+                {{bookings.end_date}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
 
 </div>
