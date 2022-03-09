@@ -15,14 +15,14 @@
               </ul>
               <!--If loggoed in -->
               {{#if loggedIn}}
-              <div class="form-group">
+              <form class="form-group">
                 <label for="start_date">Check In Date</label>
                 <input type="date" id="start_date" name="start_date">
                 <label for="end_date">Check Out Date</label>
                 <input type="date" id="end_date" name="end_date">
                 <button type="submit" class="btn btn-outline-danger">Book Room</button>
                 <!--end of if logged in -->
-              </div>
+              </form>
               {{/if}}
               
               {{#if loggedIn}}
