@@ -8,6 +8,7 @@ router.use("/rooms", RoomsRoute);
 const RoomDetailsRoute = require("./roomDetail_routes.js");
 router.use("/room-details", RoomDetailsRoute);
 
-
+const dashboardRoute = require('./dashboard-routes')
+router.use('/dashboard', dashboardRoute)
 
 module.exports = router;
