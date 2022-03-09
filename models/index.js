@@ -32,18 +32,6 @@ User.hasMany(Comment, {
   onDelete: "SET NULL",
 });
 
-User.belongsToMany(Room, {
-  through: Booking_Dates,
-  
-  foreignKey: "user_id",
-});
-
-Room.belongsToMany(User, {
-  through: Booking_Dates,
-  
-  foreignKey: "room_id",
-});
-
 Booking_Dates.belongsTo(User, {
   foreignKey: "user_id",
 });

@@ -43,8 +43,8 @@ router.get("/room/:id", (req, res) => {
 
 router.post("/", (req,res) => {
     Booking_Dates.create({
-        user_id:req.body.user_id,
-        room_id:req.body.room_id,
+        user_id:req.body.userId,
+        room_id:req.body.roomId,
         start_date:req.body.start_date,
         end_date: req.body.end_date
     }).then((dbBookingData) => res.json(dbBookingData))

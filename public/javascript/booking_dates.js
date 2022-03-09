@@ -3,18 +3,20 @@ async function bookingFormHandler(event) {
 
     const start_date = document.querySelector('#start_date').value.trim();
     const end_date = document.querySelector('#end_date').value.trim();
-    const room_id = window.location.toString().split('/')[
+    const roomId = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
-      ]; 
+      ];
+    const userId = document.querySelector('#user_id').value
 
-    console.log(start_date, end_date, room_id);
+    console.log(start_date, end_date, roomId, userId);
 
     const response = await fetch('/api/booking', {
         method: 'POST',
         body: JSON.stringify({
             start_date,
             end_date,
-            room_id
+            roomId,
+            userId
         }),
         headers: {
             'Content-Type': 'application/json'
