@@ -15,7 +15,7 @@
               </ul>
               <!--If loggoed in -->
               {{#if loggedIn}}
-              <form class="form-group">
+              <form id="booking-date" class="form-group">
                 <label for="start_date">Check In Date</label>
                 <input type="date" id="start_date" name="start_date" class="form-control">
                 <label for="end_date">Check Out Date</label>
@@ -57,4 +57,5 @@
 
         {{#if loggedIn}}
         <script src="/javascript/comments.js"></script>
+        <script src="/javascript/booking-dates.js"></script>
         {{/if}}
