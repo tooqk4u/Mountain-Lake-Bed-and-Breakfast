@@ -1,16 +1,20 @@
 async function bookingFormHandler(event) {
     event.preventDefault();
 
-    const checkIn = document.querySelector('#start_date').value.trim();
-    const checkOut = document.querySelector('#end_date').value.trim();
+    const start_date = document.querySelector('#start_date').value.trim();
+    const end_date = document.querySelector('#end_date').value.trim();
+    const room_id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+      ]; 
 
-    console.log(checkIn, checkOut);
+    console.log(start_date, end_date, room_id);
 
-    const response = await fetch('/api/bookings', {
+    const response = await fetch('/api/booking', {
         method: 'POST',
         body: JSON.stringify({
-            checkIn,
-            checkOut
+            start_date,
+            end_date,
+            room_id
         }),
         headers: {
             'Content-Type': 'application/json'
