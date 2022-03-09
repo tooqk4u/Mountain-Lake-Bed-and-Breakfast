@@ -5,8 +5,8 @@
         {{#each rooms as |room| }}
         <article class="room">
             <img src="{{ room_img }}" alt="image of {{room_name}}" />
-            <div class="room-bio">
-                <a href="/room-details/{{id}}">
+            <div class="room-bio room-anchor">
+                <a href="/room-details/{{id}}" >
                     <h3 class="room-name">{{ room_name }}</h3>
                 </a>
 
