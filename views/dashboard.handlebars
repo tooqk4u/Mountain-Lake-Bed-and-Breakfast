@@ -1,10 +1,13 @@
 <div>
+    <h2>Guest Dashboard</h2>
+
+    <h3>Guest Information</h3>
     <div class="user-data">
     <p>Name: {{dashData.first_name}} {{dashData.last_Name}}</p>
     <p>email: {{dashData.email}}</p>
     </div>
     
-    <h2>Bookings</h2>
+    <h3>Bookings</h3>
     <table>
         <tr>
             <th>
@@ -23,10 +26,10 @@
                 {{bookings.room.room_name}}
             </td>
             <td>
-                {{bookings.start_date}}
+                {{format_date bookings.start_date}}
             </td>
             <td>
-                {{bookings.end_date}}
+                {{format_date bookings.end_date}}
             </td>
         </tr>
         {{/each}}
