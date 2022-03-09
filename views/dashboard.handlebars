@@ -1,0 +1,38 @@
+<div>
+    <h2>Guest Dashboard</h2>
+
+    <h3>Guest Information</h3>
+    <div class="user-data">
+    <p>Name: {{dashData.first_name}} {{dashData.last_Name}}</p>
+    <p>email: {{dashData.email}}</p>
+    </div>
+    
+    <h3>Bookings</h3>
+    <table>
+        <tr>
+            <th>
+                Room
+            </th>
+            <th>
+                Check In Date
+            </th>
+            <th>
+                Check Out Date
+            </th>
+        </tr>
+        {{#each dashData.booking_dates as |bookings|}}
+        <tr>
+            <td>
+                {{bookings.room.room_name}}
+            </td>
+            <td>
+                {{format_date bookings.start_date}}
+            </td>
+            <td>
+                {{format_date bookings.end_date}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+
+</div>
