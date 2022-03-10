@@ -9,7 +9,7 @@ router.get("/", withAuth, (req, res) => {
     attributes: { exclude: ["password"] },
     include: [
       {
-        model: Booking_Dates,
+        model: Booking_Dates, required:false, 
         where: {
           start_date: { [Op.gte]: dayjs() },
         },
