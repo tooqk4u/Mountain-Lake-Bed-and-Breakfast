@@ -1,0 +1,23 @@
+<div class="navigation-bar">
+  <ul class="navigation-bar-holder">
+    <li>
+      <a href="/" class="left-underline nav-button brand-logo">
+        Mountain Lake Bed & Breakfast
+      </a>
+    </li>
+
+
+    {{#if loggedIn}}
+    <li class="nav-item active">
+      <a href="/dashboard" class="left-underline nav-button" data-scroll>Reservations</a>
+    </li>
+    <li class="nav-item">
+      <a id="logout" href="#" class="left-underline nav-button" data-scroll>Log Out</a>
+    </li>
+    {{else}}<li class="nav-item">
+      <a href="/login" class="left-underline nav-button" data-scroll>Log In</a>
+    </li>
+    {{/if}}
+    
+  </ul>
+</div>
