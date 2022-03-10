@@ -241,8 +241,6 @@ header > div > h2{
   margin-left:3%;
   
 }
-
-
 .rm-details {
   margin:12%;
   color:#000;  
@@ -251,6 +249,7 @@ header > div > h2{
 .comment-intro {
   font-size: 2em;
   color:black;
+  margin-left: 25%;
 }
 .comment-form{
   margin-left: 25%;
@@ -270,9 +269,16 @@ header > div > h2{
 }
 .review-title {
   color:#212529;
+  margin-left: 25%;
 }
 
 .reviews {
   color:#212529;
 
 }
+
+.rm-details {
+  margin:12%;
+  color:#000;  
+}
+
