@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
       if (response.ok) {
           document.location.replace('/');
       } else {
-          alert(response.statusText);
+          alert("Incorrect Password");
       }
   }
 }
@@ -48,5 +48,5 @@ async function signupFormHandler(event) {
   }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+//document.querySelector('#register_btn').addEventListener('click', signupFormHandler);
 document.querySelector('.signin-form').addEventListener('submit', loginFormHandler);
