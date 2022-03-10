@@ -92,6 +92,7 @@ a.nav-button {
 }
 a.nav-button:hover {
   text-decoration: none;
+  
 }
 li.active > a.nav-button {
   cursor: default;
