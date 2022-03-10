@@ -10,7 +10,7 @@
                  <img src="{{ room_details.room_img }}"  alt="image of {{room_details.room_name}}" class="rm-book"/>
             </div>
             
-              <!--If loggoed in -->
+              <!--If logged in -->
             <div> 
              <div class="booking-form">
               {{#if loggedIn}}
@@ -37,7 +37,7 @@
               </form>
              </div>
             </div>  
-
+              {{/if}}
            
               <p class="rm-details">{{room_details.room_description}}</p>
             
@@ -51,10 +51,12 @@
               </ul>
             </div>
             -->
-              {{/if}}
+             
               
+              {{#if loggedIn}}
               <!-- again, if logged in -->
               <p class="comment-intro">Did you stay in {{room-details.room_name}}? Tell other guests about your experience!</p>
+              {{/if}}
               
               {{#if loggedIn}}
               <form class=" comment-form">
@@ -70,7 +72,7 @@
               {{/if}}          
 
               
-            <div>
+            <div class="review-box">
               <h4 class="review-title">What People are saying about {{room_details.room_name}} </h4>
               <!--comments here- maybe limit to 5? --> 
                 <ul class="reviews">
@@ -86,7 +88,7 @@
 
         {{> comments post.comments}}
 
-        {{#if loggedIn}}
+        
         <script src="/javascript/comments.js"></script>
         <script src="/javascript/booking_dates.js"></script>
-        {{/if}}
+        
