@@ -74,12 +74,8 @@
 <div class="review-box">
   <h4 class="review-title">What People are saying about {{room_details.room_name}} </h4>
   <!--comments here- maybe limit to 5? -->
-  <ul class="reviews">
-    {{#each room_details.comments as |comment| }}
-    <li>{{comment.comment_text}} -- {{comment.user.first_name}} </li>
-    {{/each}}
-  </ul>
-
+  <p class="reviews">
+  {{choose_comment room_details.comments}} </p>
 </div>
 
 </div>

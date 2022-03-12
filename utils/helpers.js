@@ -17,5 +17,10 @@ module.exports = {
         }
     
         return word;
+      },
+      choose_comment: list =>{
+        const comment = list[Math.floor(Math.random() * list.length)]
+        return `${comment.comment_text} -- ${comment.user.first_name}`
       }
+
     }
