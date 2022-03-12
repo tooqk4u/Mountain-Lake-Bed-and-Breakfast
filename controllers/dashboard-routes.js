@@ -3,6 +3,8 @@ const { Room, User, Booking_Dates } = require("../models");
 const { Op } = require("sequelize");
 const dayjs = require("dayjs");
 const withAuth = require('../utils/auth')
+
+
 router.get("/", withAuth, (req, res) => {
   User.findOne({
     where:{id: req.session.user_id},
