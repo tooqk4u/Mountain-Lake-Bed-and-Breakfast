@@ -1,47 +1,36 @@
-       <br>
-       <br>
-       <br>       
-       <header>     
-         <div>          
-          <h2>{{room_details.room_name}}</h2>
-         </div> 
-       </header>    
-           <div>
-                 <img src="{{ room_details.room_img }}"  alt="image of {{room_details.room_name}}" class="rm-book"/>
-            </div>
-            
-              <!--If logged in -->
-            <div> 
-             <div class="booking-form">
-              {{#if loggedIn}}
-              <form id="" class="form-group booking-date">
-                <input type="hidden" 
-                       id="user_id" 
-                       name="user_id" 
-                       value={{userId}}
-                       class="form-control">
-                <label for="start_date">Check In Date</label>
-                <input type="date" 
-                       id="start_date" 
-                       name="start_date" 
-                       class="form-control">
-                <label for="end_date">Check Out Date</label>
-                <input type="date" 
-                       id="end_date" 
-                       name="end_date" 
-                       class="form-control">
-                <br>
-                <button type="submit" 
-                class="btn btn-outline-danger form-control btn-primary book-btn">Book Room</button>
-                <!--end of if logged in -->
-              </form>
-             </div>
-            </div>  
-              {{/if}}
-           
-              <p class="rm-details">{{room_details.room_description}}</p>
-            
-            <!--
+<br>
+<br>
+<br>
+<header>
+  <div>
+    <h2>{{room_details.room_name}}</h2>
+  </div>
+</header>
+<div>
+  <img src="{{ room_details.room_img }}" alt="image of {{room_details.room_name}}" class="rm-book" />
+</div>
+
+<!--If logged in -->
+<div>
+  <div class="booking-form">
+    {{#if loggedIn}}
+    <form id="booking-date" class="form-group booking-date">
+      <input type="hidden" id="user_id" name="user_id" value={{userId}} class="form-control">
+      <label for="start_date">Check In Date</label>
+      <input type="date" id="start_date" name="start_date" class="form-control">
+      <label for="end_date">Check Out Date</label>
+      <input type="date" id="end_date" name="end_date" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-outline-danger form-control btn-primary book-btn">Book Room</button>
+      <!--end of if logged in -->
+    </form>
+  </div>
+</div>
+{{/if}}
+
+<p class="rm-details">{{room_details.room_description}}</p>
+
+<!--
             <div>
               <h4 class="amenities">Amenities</h4>
               <ul class="list-unstyled">
@@ -51,44 +40,40 @@
               </ul>
             </div>
             -->
-             
-              
-              {{#if loggedIn}}
-              <!-- again, if logged in -->
-              <p class="comment-intro">Did you stay in {{room-details.room_name}}? Tell other guests about your experience!</p>
-              {{/if}}
-              
-              {{#if loggedIn}}
-              <form class=" comment-form">
-                <input type="hidden"
-                       id="user_id" 
-                       name="user_id" value={{userId}}
-                       class="form-control">
-                <label for="comment">COMMENTS: </label>
-                <input type="text" id="comment-body" class="form-control" name="comment-body" placeholder="Place your comment Here">
-                <button type="submit" class="btn btn-outline-danger btn-primary comment-btn">Submit</button>
-                <!--end of if logged in -->
-              </form> 
-              {{/if}}          
 
-              
-            <div class="review-box">
-              <h4 class="review-title">What People are saying about {{room_details.room_name}} </h4>
-              <!--comments here- maybe limit to 5? --> 
-                <ul class="reviews">
-                    {{#each room_details.comments as |comment| }}
-                    <li>{{comment.comment_text}} -- {{comment.user.first_name}} </li>
-                    {{/each}}
-                </ul>
-              
-            </div>
-            
-          </div>
-        </div>
 
-        {{> comments post.comments}}
+{{#if loggedIn}}
+<!-- again, if logged in -->
+<p class="comment-intro">Did you stay in {{room-details.room_name}}? Tell other guests about your experience!</p>
+{{/if}}
 
-        
-        <script src="/javascript/comments.js"></script>
-        <script src="/javascript/booking_dates.js"></script>
-        
+{{#if loggedIn}}
+<form class=" comment-form">
+  <input type="hidden" id="user_id" name="user_id" value={{userId}} class="form-control">
+  <label for="comment">COMMENTS: </label>
+  <input type="text" id="comment-body" class="form-control" name="comment-body" placeholder="Place your comment Here">
+  <button type="submit" class="btn btn-outline-danger btn-primary comment-btn">Submit</button>
+  <!--end of if logged in -->
+</form>
+{{/if}}
+
+
+<div class="review-box">
+  <h4 class="review-title">What People are saying about {{room_details.room_name}} </h4>
+  <!--comments here- maybe limit to 5? -->
+  <ul class="reviews">
+    {{#each room_details.comments as |comment| }}
+    <li>{{comment.comment_text}} -- {{comment.user.first_name}} </li>
+    {{/each}}
+  </ul>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+<script src="/javascript/comments.js"></script>
+<script src="/javascript/booking_dates.js"></script>
