@@ -12,13 +12,14 @@
       <div class="guest-rooms">
        {{#each rooms as |room| }}
         <article class="room">
+           <a href="/room-details/{{id}}" class="front-page-link">
             <img src="{{ room_img }}" alt="image of {{room_name}}" />
             <div class="room-bio">
-                <a href="/room-details/{{id}}" class="front-page-link">
+               
                     <h3 class="room-name">{{ room_name }}</h3>
                 </a>
 
-                <p>
+                <p class="text-dark">
                     {{ room_description }}
                 </p>
             </div>
