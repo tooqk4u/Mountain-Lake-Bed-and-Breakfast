@@ -236,8 +236,8 @@ header > div > h2 {
   float: left;
   margin-left: 3%;
 }
-.rm-details {
-  margin: 12%;
+p > .rm-details {
+  margin: 20%;
   color: #000;
 }
 
@@ -272,10 +272,17 @@ header > div > h2 {
 }
 
 .rm-details {
-  margin: 12%;
-  color: #000;
+  margin: 12%;  
+  font-weight: bolder;
 }
-
+.room-name {
+  color: #86401a;
+}
+ .rm-description {
+   color: black;
+   font-weight: bold;
+   font-style: italic;
+ }
 .review-box {
   text-align: left;
   height: 50%;
@@ -283,4 +290,8 @@ header > div > h2 {
 .dashboard-header {
   font-weight: bold;
   margin-left: 15%;
+}
+.room-pic {
+  height: 1200 px;
+  width: 800px;
 }
