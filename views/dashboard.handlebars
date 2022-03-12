@@ -8,7 +8,8 @@
        </header>  
 
         
-    <div>
+    <div class="container">
+        <div class="column vh-100">
         <h3>Guest Information</h3>
         <div class="user-data">
             <p>Name: {{dashData.first_name}} {{dashData.last_Name}}</p>
@@ -16,16 +17,16 @@
         </div>
     
         <h3>Bookings</h3>
-        <table>
+        <table class="table">
         <tr>
-            <th>
+            <th scope="col">
                 Room
             </th>
-            <th>
+            <th scope="col">
                 Check In Date
             </th>
             
-            <th>
+            <th scope="col">
                 Check Out Date
             </th>
         </tr>
@@ -43,5 +44,5 @@
         </tr>
         {{/each}}
     </table>
-
+</div>
 </div>
