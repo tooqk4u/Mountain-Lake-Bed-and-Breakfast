@@ -19,8 +19,12 @@ module.exports = {
         return word;
       },
       choose_comment: list =>{
+        try{
         const comment = list[Math.floor(Math.random() * list.length)]
-        return `${comment.comment_text} -- ${comment.user.first_name}`
+        return `${comment.comment_text} -- ${comment.user.first_name}`}
+        catch{
+          return "Be the first to comment"
+        }
       }
 
     }
