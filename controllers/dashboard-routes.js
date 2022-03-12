@@ -15,7 +15,7 @@ router.get("/", withAuth, (req, res) => {
         where: {
           start_date: { [Op.gte]: dayjs() },
         },
-        include: [{ model: Room, attributes: ["room_name"] }],
+        include: [{ model: Room, attributes: ["room_name", "room_price"] }],
       },
     ],
   })

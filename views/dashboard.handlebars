@@ -29,6 +29,10 @@
             <th scope="col">
                 Check Out Date
             </th>
+        <th scope="col">
+                Cost of Stay
+            </th>
+
         </tr>
         {{#each dashData.booking_dates as |bookings|}}
         <tr>
@@ -42,6 +46,10 @@
                 {{format_date bookings.end_date}}
             </td>
         </tr>
+
+        <td>
+                ${{stay_estimate bookings.start_date bookings.end_date bookings.room.room_price }}
+            </td>
         {{/each}}
     </table>
 </div>
