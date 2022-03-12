@@ -25,6 +25,12 @@ module.exports = {
         catch{
           return "Be the first to comment"
         }
-      }
+      },
+
+      stay_estimate: (start_date, end_date ,room_rate) =>{
+        end_date = dayjs(end_date)
+        console.log(end_date.diff(start_date, 'day'),  room_rate)
+      return end_date.diff(start_date, 'day') * parseInt(room_rate)}
+
 
     }
