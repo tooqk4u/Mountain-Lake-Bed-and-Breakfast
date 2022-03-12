@@ -6,10 +6,21 @@
     <h2>{{room_details.room_name}}</h2>
   </div>
 </header>
-<div>
-  <img src="{{ room_details.room_img }}" alt="image of {{room_details.room_name}}" class="rm-book" />
-</div>
 
+<div class = "column">
+  <div class="row d-flex flex-grow-1 p-2">
+
+  <img src="{{ room_details.room_img }}" alt="image of {{room_details.room_name}}" class="img-fluid mx-auto h-75 w-75 d-block"  />
+
+
+
+
+</div>
+<div class="row m-2 d-flex justify-content-center">
+<div class = 'col-12'>
+<p class="text-dark text-center">{{room_details.room_description}}</p>
+</div>
+</div>
 <!--If logged in -->
 <div>
   <div class="booking-form">
@@ -28,7 +39,7 @@
 </div>
 {{/if}}
 
-<p class="rm-details">{{room_details.room_description}}</p>
+
 
 <!--
             <div>
@@ -71,7 +82,7 @@
 
 </div>
 </div>
-
+</div>
 
 
 
