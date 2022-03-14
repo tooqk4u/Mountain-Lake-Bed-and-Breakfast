@@ -20,7 +20,6 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  
 }
 
 article,
@@ -203,7 +202,97 @@ body:after {
   color: #000;
 }
 
-
 .front-page-link {
-text-decoration: none;
+  text-decoration: none;
+  color: #000;
+}
+
+header > div > h2 {
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 15%;
+}
+
+.booking-form {
+  color: #000;
+  font-weight: bold;
+  margin-left: 65%;
+  margin-top: 5%;
+}
+
+#start_date,
+#end_date {
+  width: 65%;
+}
+
+.book-btn {
+  width: 35%;
+  margin-left: 15%;
+  margin-bottom: 10%;
+}
+
+.rm-book {
+  width: 50%;
+  float: left;
+  margin-left: 3%;
+}
+-
+p > .rm-details {
+  margin: 20%;
+  color: #000;
+}
+
+.comment-intro {
+  font-size: 2em;
+  color: black;
+  margin-left: 25%;
+}
+.comment-form {
+  margin-left: 25%;
+  margin-right: 25%;
+  color: #000;
+}
+#comment-body {
+  margin-top: 2%;
+}
+
+.comment-btn {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.review-title {
+  color: #212529;
+  margin-left: 25%;
+}
+
+.reviews {
+  color: #212529;
+  margin-right: 5%;
+}
+
+.rm-details {
+  margin: 12%;  
+  font-weight: bolder;
+}
+.room-name {
+  color: #86401a;
+}
+ .rm-description {
+   color: black;
+   font-weight: bold;
+   font-style: italic;
+ }
+.review-box {
+  text-align: left;
+  height: 50%;
+}
+.dashboard-header {
+  font-weight: bold;
+  margin-left: 15%;
+}
+.room-pic {
+  height: 1200 px;
+  width: 800px;
 }

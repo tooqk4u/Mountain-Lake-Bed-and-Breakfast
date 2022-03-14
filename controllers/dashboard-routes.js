@@ -3,6 +3,8 @@ const { Room, User, Booking_Dates } = require("../models");
 const { Op } = require("sequelize");
 const dayjs = require("dayjs");
 const withAuth = require('../utils/auth')
+
+
 router.get("/", withAuth, (req, res) => {
   User.findOne({
     where:{id: req.session.user_id},
@@ -13,7 +15,7 @@ router.get("/", withAuth, (req, res) => {
         where: {
           start_date: { [Op.gte]: dayjs() },
         },
-        include: [{ model: Room, attributes: ["room_name"] }],
+        include: [{ model: Room, attributes: ["room_name", "room_price"] }],
       },
     ],
   })

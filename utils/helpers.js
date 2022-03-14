@@ -1,8 +1,7 @@
+const dayjs = require('dayjs')
 module.exports = {
     format_date: date => {
-      return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
-        date
-      ).getFullYear()}`;
+      return dayjs(date).format('MM/DD/YYYY');
     },
     format_url: url => {
         return url
@@ -18,5 +17,20 @@ module.exports = {
         }
     
         return word;
-      }
+      },
+      choose_comment: list =>{
+        try{
+        const comment = list[Math.floor(Math.random() * list.length)]
+        return `${comment.comment_text} -- ${comment.user.first_name}`}
+        catch{
+          return "Be the first to comment"
+        }
+      },
+
+      stay_estimate: (start_date, end_date ,room_rate) =>{
+        end_date = dayjs(end_date)
+        console.log(end_date.diff(start_date, 'day'),  room_rate)
+      return end_date.diff(start_date, 'day') * parseInt(room_rate)}
+
+
     }

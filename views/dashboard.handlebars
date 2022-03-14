@@ -1,24 +1,38 @@
-<div>
-    <h2>Guest Dashboard</h2>
+       <br>
+       <br>
+       <br>       
+       <header class="dashboard-header">     
+         <div>          
+          <h2>Guest Dashboard</h2>
+         </div> 
+       </header>  
 
-    <h3>Guest Information</h3>
-    <div class="user-data">
-    <p>Name: {{dashData.first_name}} {{dashData.last_Name}}</p>
-    <p>email: {{dashData.email}}</p>
-    </div>
+        
+    <div class="container">
+        <div class="column vh-100">
+        <h3>Guest Information</h3>
+        <div class="text-dark" >
+            <p>Name: {{dashData.first_name}} {{dashData.last_name}}</p>
+            <p>email: {{dashData.email}}</p>
+        </div>
     
-    <h3>Bookings</h3>
-    <table>
+        <h3>Bookings</h3>
+        <table class="table">
         <tr>
-            <th>
+            <th scope="col">
                 Room
             </th>
-            <th>
+            <th scope="col">
                 Check In Date
             </th>
-            <th>
+            
+            <th scope="col">
                 Check Out Date
             </th>
+        <th scope="col">
+                Cost of Stay
+            </th>
+
         </tr>
         {{#each dashData.booking_dates as |bookings|}}
         <tr>
@@ -32,7 +46,11 @@
                 {{format_date bookings.end_date}}
             </td>
         </tr>
+
+        <td>
+                ${{stay_estimate bookings.start_date bookings.end_date bookings.room.room_price }}
+            </td>
         {{/each}}
     </table>
-
+</div>
 </div>

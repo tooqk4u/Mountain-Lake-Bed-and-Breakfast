@@ -21,7 +21,9 @@ async function bookingFormHandler(event) {
         headers: {
             'Content-Type': 'application/json'
         }
-    });
+    }).then(response=>{
+        document.location.replace('/dashboard')}
+    );
 }
 
 document.querySelector('#booking-date').addEventListener('submit', bookingFormHandler)
